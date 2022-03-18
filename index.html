@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".\style.css">
+    <!-- <script src="javascript.js" type="module" defer></script> -->
+    <script type="text/javascript" src="javascript.js" defer></script>
+
+    <title>Consulta API</title>
+</head>
+<body>
+    <main class="container">
+        <h1 class="title">Consulta CEP e Temperatura - Via API</h1>
+        <br>
+<form id="formulario">
+        <div class="row">
+            <div class="inputbox">
+                <input type="text" id="cep" required name="input" placeholder="Digite seu CEP">
+                <label for="cep">CEP</label>
+            </div>
+            <br>
+        </div>
+    <br>
+        <div class="row">
+                <div class="inputbox">
+                <input type="text" id="endereco" readonly name="input">
+                <label for="endereco">Endereço</label>
+            </div>
+                <div class="inputbox">
+                <input type="text" id="bairro" readonly name="input">
+                <label for="bairro">Bairro</label>
+            </div>
+            <div class="inputbox">
+                <input type="text" id="cidade" readonly name="input">
+                <label for="cidade">Cidade</label>
+            </div>
+        <!-- </div> -->
+        <!-- <div class="row"> -->
+            <div class="inputbox">
+                <input type="text" id="uf" readonly name="input">
+                <label for="uf">Estado - UF</label>
+            </div>
+        <h1 class="title2">Temperatura atual:</h1>
+            <div class="inputbox2">
+                <input type="text" id="temperatura" readonly name="input">
+                <!-- <label for="temperatura">Temperatura Atual</label> -->
+            </div>
+            <br>
+        </div> 
+    </form>
+        <div class="row">
+            <button type="button" id="btn_limpar" onclick="limpar()">Limpar</button>
+        </div>
+    </main>
+    
+    <!--<footer>
+        Israel Ruano &#169 2021
+    </footer> -->
+    
+</body>
+
+</html>
