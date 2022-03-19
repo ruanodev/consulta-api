@@ -1,8 +1,9 @@
 
 document.getElementById('cep').addEventListener('focusout', () => { // busca valor digitado após evento focusout, usuário sai do campo cep
+    
     const cep = document.getElementById('cep').value; // atribui o valor do campo input a variavel "cep"
     const cepValido = (cep) => cep.length == 8 && /^[0-9]+&/.test(cep);
-
+  
     if (cepValido(cep)){
     } else {
         document.getElementById('endereco').value = 'Ops! CEP incorreto!'
@@ -27,20 +28,17 @@ document.getElementById('cep').addEventListener('focusout', () => { // busca val
         document.getElementById('temperatura').value = dadostemp.temperature;
         //console.log(dadostemp.temperature);
         //console.log(dados);
-       
-
+ 
         });
       }
     
      });
     
   });
-  
+ 
 
 function limpar(){
 document.getElementById('formulario').reset();
 
 }
-
-//document.getElementById('endereco').innerText = JSON.stringify(dados.localidade); // apresenta resultado dentro do campo com ID chamado "debug" (palavra JSON deve estar em maiusculo)
      
