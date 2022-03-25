@@ -98,7 +98,7 @@ input {
     color: var(--primary-color);
     transition: .7s;*/
     cursor: text;
-    border-radius: 5px;
+    
 }
 
 .container button {
@@ -126,5 +126,14 @@ footer {
     color: #121e30;
     background-color:#d4e2f7;
     
-
 }
+
+.buttonmobile {
+    display: none;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .buttonmobile {
+      display: block;
+    }
+  }
