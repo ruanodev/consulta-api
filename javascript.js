@@ -10,8 +10,9 @@ document.getElementById('cep').addEventListener('focusout', () => { // busca val
         document.getElementById('endereco').value = 'Ops! CEP incorreto!'
         }
 
-        limpar();
-    
+     limparDados();
+        
+
     fetch(`https://viacep.com.br/ws/${cep}/json/`) // "busca" - efetua a busca / requisição externa via API - endereço deve estar com acento inverso (para a esquerda) ` `
     .then((resposta) => resposta.json()) // transforma a resposta do formato texto para formato Json
     .then((dados) => {
@@ -39,9 +40,14 @@ document.getElementById('cep').addEventListener('focusout', () => { // busca val
      });
 });
  
-
-
 function limpar(){
 document.getElementById('formulario').reset();
 
 }
+
+function limparDados(){
+    document.getElementById('bairro').value = '';
+    document.getElementById('cidade').value = '';
+    document.getElementById('uf').value = '';
+    document.getElementById('temperatura').value = '';
+ }
