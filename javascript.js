@@ -7,7 +7,7 @@ document.getElementById('cep').addEventListener('focusout', () => { // busca val
     if (cepValido(cep)){
       
     } else {
-        document.getElementById('endereco').value = 'Ops! CEP incorreto!'
+        document.getElementById('endereco').value = 'Ops!! CEP incorreto!'
         }
 
      limparDados();
@@ -17,7 +17,7 @@ document.getElementById('cep').addEventListener('focusout', () => { // busca val
     .then((dados) => {
     
     if (dados.hasOwnProperty('erro')){ // trata retorno de erro caso CEP não seja encontrado
-        document.getElementById('endereco').value = 'Ops! CEP não encontrado!' // mensagem a ser exibida no campo "endereço"
+        document.getElementById('endereco').value = 'Ops!! CEP não encontrado!' // mensagem a ser exibida no campo "endereço"
 
     } else {
 
